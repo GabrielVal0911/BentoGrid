@@ -1,0 +1,95 @@
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  /* background-color: #fffbfb; */
+  background-color: #f8f8ff;
+}
+
+/* ------------
+    TYPOGRAPHY 
+   ------------ */
+
+h1 {
+  font-size: 2.25rem;
+  color: white;
+}
+
+h2 {
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin: 0.55em 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+.grid-one-span {
+  color: var(--yellow-100);
+}
+
+/* ----------------
+        Layout
+   ---------------- */
+
+img {
+  width: 100%;
+}
+
+.bento-grid {
+  /* For now i use padding,later change with grid */
+  padding: 0 1.7em;
+}
+
+.bento-grid > * {
+  border-radius: 10px;
+  padding: 1.25em;
+  margin: 1.5em 0;
+}
+
+/* grid one */
+
+.bento-grid > :nth-child(1) {
+  background-color: var(--purple-500);
+  color: white;
+
+  padding: 2.5em;
+  text-align: center;
+}
+
+.five-stars {
+  width: 50%;
+  margin-top: 1em;
+}
+
+/* grid two */
+
+.bento-grid > :nth-child(2) {
+  background-color: white;
+}
+
+/* grid three */
+
+.bento-grid > :nth-child(3) {
+  background-color: var(--yellow-500);
+}
+
+.bento-grid > :nth-child(3) h2,
+.bento-grid > :nth-child(3) img {
+  width: 70%;
+}
+
+/* .bento-grid > :nth-child(3) img {
+  
+} */
