@@ -21,7 +21,7 @@ body {
    ------------ */
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.7rem;
   color: white;
 }
 
@@ -36,7 +36,7 @@ p {
 }
 
 .grid-one-span {
-  color: var(--yellow-100);
+  color: var(--yellow-500);
 }
 
 /* ----------------
@@ -44,18 +44,25 @@ p {
    ---------------- */
 
 img {
-  width: 100%;
+  width: 50%;
 }
 
 .bento-grid {
-  /* For now i use padding,later change with grid */
   padding: 0 1.7em;
+  display: grid;
 }
 
 .bento-grid > * {
   border-radius: 10px;
   padding: 1.25em;
-  margin: 1.5em 0;
+  margin: 0.8em 0;
+}
+
+/* grid grouped together */
+.bento-grid > :nth-child(1),
+.bento-grid > :nth-child(4),
+.bento-grid > :nth-child(5) {
+  text-align: center;
 }
 
 /* grid one */
@@ -65,11 +72,9 @@ img {
   color: white;
 
   padding: 2.5em;
-  text-align: center;
 }
 
 .five-stars {
-  width: 50%;
   margin-top: 1em;
 }
 
@@ -79,17 +84,128 @@ img {
   background-color: white;
 }
 
+.bento-grid > :nth-child(2) img,
+.bento-grid > :nth-child(4) img {
+  width: 100%;
+}
+
 /* grid three */
 
 .bento-grid > :nth-child(3) {
   background-color: var(--yellow-500);
+  overflow: hidden;
+  position: relative;
+  height: 315px;
 }
 
 .bento-grid > :nth-child(3) h2,
-.bento-grid > :nth-child(3) img {
+.calendar-img {
   width: 70%;
+  margin-top: 0;
 }
 
-/* .bento-grid > :nth-child(3) img {
-  
-} */
+/* I need to get back */
+.calendar-img {
+  position: absolute;
+}
+
+/* grid four */
+
+.bento-grid > :nth-child(4) {
+  background-color: var(--purple-100);
+}
+
+.bento-grid > :nth-child(4) img {
+  max-width: 500px;
+}
+
+.bento-grid > :nth-child(4) p {
+  padding: 1.25em 0;
+}
+
+/* grid five */
+
+.bento-grid > :nth-child(5) {
+  background-color: var(--purple-500);
+}
+
+.bento-grid > :nth-child(5) img {
+  width: 70%;
+  padding-top: 1em;
+}
+
+.bento-grid > :nth-child(5) p {
+  color: white;
+  font-size: 36px;
+  padding: 1em 1em 0;
+}
+
+/* grid six */
+
+.bento-grid > :nth-child(6) {
+  background-color: white;
+}
+
+.bento-grid > :nth-child(6) h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.bento-grid > :nth-child(6) img {
+  margin-top: 1.25em;
+}
+
+/* grid seven */
+
+.bento-grid > :nth-child(7) {
+  background-color: var(--yellow-100);
+}
+
+.bento-grid > :nth-child(7) h2 {
+  font-size: 2.5rem;
+}
+
+.grid-seven-span {
+  font-style: italic;
+  color: var(--purple-500);
+}
+
+/* grid eight */
+
+.bento-grid > :nth-child(8) {
+  background-color: var(--yellow-500);
+}
+
+.bento-grid > :nth-child(8) h2 {
+  font-size: 2rem;
+  padding-right: 1em;
+}
+
+/* media queries */
+
+@media (min-width: 600px) {
+  .bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .bento-grid > :nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  /* de citit despre nth-child sa caut o variantta mai scurta 
+    de adaugat min-width pe imagini
+  */
+  .bento-grid > :nth-child(2),
+  .bento-grid > :nth-child(3),
+  .bento-grid > :nth-child(5),
+  .bento-grid > :nth-child(6),
+  .bento-grid > :nth-child(7),
+  .bento-grid > :nth-child(8) {
+    grid-column: span 2;
+  }
+
+  .bento-grid > :nth-child(4) {
+    grid-column: 1 / -1;
+  }
+}
