@@ -45,11 +45,10 @@ p {
 img {
   width: 50%;
   min-width: 150px;
-  /* max-width: 250px; */
 }
 
 .bento-grid {
-  padding: 0 1.7em;
+  padding: 1em 1.7em;
   max-width: 1450px;
   margin: auto;
   display: grid;
@@ -74,7 +73,6 @@ img {
 .bento-grid > :nth-child(1) {
   background-color: var(--purple-500);
   color: white;
-
   padding: 2.5em;
 }
 
@@ -103,13 +101,10 @@ img {
   background-color: var(--yellow-500);
   overflow: hidden;
   position: relative;
-  /* height: 315px; */
 }
 
 .bento-grid > :nth-child(3) h2,
 .calendar-img {
-  /* width: 70%; */
-
   margin-top: 0;
 }
 
@@ -117,7 +112,6 @@ img {
   font-size: 1.4rem;
 }
 
-/* I need to get back */
 .calendar-img {
   position: absolute;
   min-width: 200px;
@@ -134,7 +128,6 @@ img {
 }
 
 .bento-grid > :nth-child(4) p {
-  /* padding: 1.25em 0; */
   font-size: 1.35rem;
   padding-top: 1em;
 }
@@ -147,14 +140,12 @@ img {
 
 .bento-grid > :nth-child(5) img {
   width: 70%;
-  /* padding-top: 1em; */
 }
 
 .bento-grid > :nth-child(5) p {
   color: white;
-  font-size: 1.6em;
+  font-size: 1.5em;
   padding-top: 1em;
-  /* padding: 1em 1em 0; */
 }
 
 /* grid six */
@@ -181,6 +172,7 @@ img {
 .bento-grid > :nth-child(7) h2 {
   font-size: 2rem;
   margin: 0;
+  margin-bottom: 0.6em;
 }
 
 .grid-seven-span {
@@ -252,6 +244,10 @@ img {
     grid-area: followers;
   }
 
+  .bento-grid > :nth-child(5) img {
+    max-width: 170px;
+  }
+
   .bento-grid > :nth-child(6) {
     grid-area: growth;
   }
@@ -271,15 +267,6 @@ img {
   .grid-grow-followers {
     display: flex;
     align-items: center;
-  }
-  .bento-grid > :nth-child(5) img {
-    flex: 1;
-    max-width: 180px;
-    object-fit: contain;
-  }
-
-  .bento-grid > :nth-child(8) img {
-    max-width: 100px;
   }
 }
 
@@ -311,7 +298,6 @@ img {
 
   .bento-grid > :nth-child(5) p {
     font-size: 1.9rem;
-    flex: 1;
   }
 
   .bento-grid > :nth-child(7) h2 {
@@ -328,10 +314,6 @@ img {
     font-size: 2rem;
     text-align: center;
   }
-
-  .bento-grid > :nth-child(8) img {
-    max-width: none;
-  }
 }
 
 @media (min-width: 1350px) {
@@ -346,13 +328,8 @@ img {
 
   .schedule-img {
     position: absolute;
-    /* left: 125px;
-    top: 165px; */
-
     height: 280px;
     top: 76px;
     left: 130px;
   }
 }
-
-/* refactor code and need to make all items smaller */
